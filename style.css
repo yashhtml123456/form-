@@ -1,0 +1,27 @@
+  /* Custom styles and animations */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Animation for the hero text */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 1.5s ease-out forwards;
+        }
+
+        /* Custom glow effect for buttons */
+        .glow-button {
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 15px rgba(22, 163, 74, 0.6); /* Updated to green glow */
+        }

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen Bal Vidyalay - Welcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-green-50/80 backdrop-blur-md shadow-md">
+        <!-- Top contact bar -->
+        <div class="bg-green-700 text-white text-xs py-1 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto flex justify-end items-center">
+                <div class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    <span>+91-8392953694 | +91-8791082246</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation Bar -->
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group" onclick="location.reload()">
+                    <div
+                        class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-green-500/50 group-hover:scale-110">
+                        <img src="WhatsApp Image 2025-09-20 at 23.56.59_b4d838ac.jpg">
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">Naveen Bal Vidyalay</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-green-600 transition-colors">Home</a>
+                    <a href="#admission" class="text-gray-600 hover:text-green-600 transition-colors">Admission</a>
+                    <a href="#gallery" class="text-gray-600 hover:text-green-600 transition-colors">Gallery</a>
+                    <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors">About</a>
+                </div>
+
+                <!-- Enroll Button (Desktop) -->
+                <div class="hidden md:block">
+                    <a href="#admission"
+                        class="bg-green-600 text-white px-5 py-2 rounded-full font-semibold glow-button">Enroll Now</a>
+                </div>
+
+                <!-- Hamburger Button (Mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed top-0 left-0 w-3/4 max-w-sm h-full bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+            <div class="p-5 flex flex-col h-full">
+                <div class="flex justify-between items-center mb-8">
+                    <span class="text-xl font-bold text-gray-800">Menu</span>
+                    <button id="close-btn" class="text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-5 text-lg">
+                    <!-- CHANGE: Mobile menu text is dark gray for visibility on white background -->
+                    <a href="#" class="mobile-link text-gray-800 hover:text-green-600">Home</a>
+                    <a href="#admission" class="mobile-link text-gray-800 hover:text-green-600">Admission</a>
+                    <a href="#gallery" class="mobile-link text-gray-800 hover:text-green-600">Gallery</a>
+                    <a href="#about" class="mobile-link text-gray-800 hover:text-green-600">About</a>
+                </div>
+                <div class="mt-auto">
+                    <!-- CHANGE: Enroll button is properly adjusted at the bottom of mobile menu -->
+                    <a href="#admission"
+                        class="mobile-link block w-full text-center bg-green-600 text-white px-5 py-3 rounded-full font-semibold glow-button">Enroll
+                        Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Image Slider -->
+        <!-- CHANGE: Reduced height for a medium size hero section -->
+        <section class="relative w-full h-[50vh] lg:h-[70vh] overflow-hidden">
+            <!-- Slider container -->
+            <div id="slider" class="flex w-full h-full transition-transform duration-700 ease-in-out">
+                <img src="WhatsApp Image 2025-09-21 at 00.27.08_0e0dc52a.jpg"
+                    class="w-full h-full object-cover flex-shrink-0">
+                <img src="WhatsApp Image 2025-09-21 at 00.27.08_ea4a69ed.jpg"
+                    class="w-full h-full object-cover flex-shrink-0">
+                <img src="WhatsApp Image 2025-09-21 at 00.27.09_56428d62.jpg"
+                    class="w-full h-full object-cover flex-shrink-0">
+                <img src="WhatsApp Image 2025-09-21 at 00.27.09_c0223cc9.jpg"
+                    class="w-full h-full object-cover flex-shrink-0">
+            </div>
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <!-- Hero Text -->
+            <div class="absolute inset-0 flex items-center justify-center text-center text-white">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider animate-fade-in-down"
+                    style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                    Naveen Bal Vidyalay
+                </h1>
+            </div>
+
+            <!-- Slider Controls -->
+            <button id="prevBtn"
+                class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50 p-2 rounded-full hover:bg-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m15 18-6-6 6-6" />
+                </svg>
+            </button>
+            <button id="nextBtn"
+                class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/50 p-2 rounded-full hover:bg-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+            </button>
+        </section>
+
+        <!-- Welcome Section -->
+        <section id="about" class="py-16 lg:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-4">WELCOME TO <span
+                        class="text-black-600">Naveen bal Vidyalay</span></h2>
+                <p class="text-center text-gray-500 mb-12 max-w-3xl mx-auto">Discover a place where learning is an
+                    adventure and every child's potential is nurtured.</p>
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="w-full lg:w-1/2">
+                        <img src="WhatsApp Image 2025-09-21 at 00.27.10_5c806fd8.jpg" alt="School Building"
+                            class="rounded-lg shadow-2xl border-8 border-white object-cover w-full h-auto">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-4">Our Mission & Vision</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            At Dr. K. N. Modi Global School, we are committed to providing a challenging, enriching, and
+                            supportive learning environment, where students are encouraged to be curious, creative, and
+                            compassionate. Our vision is to develop well-rounded, confident, and responsible individuals
+                            who aspire to achieve their full potential. We strive to create a dynamic learning community
+                            that fosters a love for learning and a commitment to academic excellence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-16 lg:py-20 bg-gray-100 relative">
+            <div
+                class="absolute inset-0 bg-[url('https://placehold.co/1200x400/eeeeee/ffffff?text=.')] bg-cover bg-center opacity-20">
+            </div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <h2 id="admission" class="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12">Our Core
+                    Strengths</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-sm md:max-w-4xl mx-auto">
+                    <!-- CHANGE: Reduced circle size for better responsive adjustment -->
+                    <div
+                        class="bg-white p-6 rounded-full shadow-lg border-2 border-green-200 aspect-square flex flex-col justify-center items-center">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-1">Expert Teachers</h3>
+                        <p class="text-4xl font-bold text-green-600 counter" data-target="40">0</p>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-full shadow-lg border-2 border-blue-200 aspect-square flex flex-col justify-center items-center">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-1">Modern Classes</h3>
+                        <p class="text-4xl font-bold text-blue-600 counter" data-target="40">0</p>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-full shadow-lg border-2 border-yellow-200 aspect-square flex flex-col justify-center items-center">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-1">Happy Students</h3>
+                        <p class="text-4xl font-bold text-yellow-500 counter" data-target="400">0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-16 lg:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12">Campus Gallery</h2>
+                <!-- CHANGE: Increased gap for a "mini" gallery feel -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div class="group overflow-hidden rounded-lg shadow-md">
+                        <img src="WhatsApp Image 2025-09-21 at 00.27.08_0e0dc52a.jpg" alt="Gallery Image 1"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="group overflow-hidden rounded-lg shadow-md lg:col-span-2">
+                        <img src="WhatsApp Image 2025-09-21 at 00.27.08_ea4a69ed.jpg" alt="Gallery Image 2"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="group overflow-hidden rounded-lg shadow-md lg:col-span-2">
+                        <img src="WhatsApp Image 2025-09-21 at 00.27.09_c0223cc9.jpg" alt="Gallery Image 3"
+                            class="w-full  h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="group overflow-hidden rounded-lg shadow-md">
+                        <img src="WhatsApp Image 2025-09-21 at 00.27.09_c0223cc9.jpg" alt="Gallery Image 4"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="group overflow-hidden rounded-lg shadow-md lg:col-span-5">
+                        <img src="WhatsApp Image 2025-09-21 at 00.27.10_5c806fd8.jpg" alt="Gallery Image 5"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#gallery"
+                        class="bg-green-600 text-white px-8 py-3 rounded-full font-semibold glow-button text-lg">View
+                        More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- About School -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 border-b-2 border-green-600 pb-2">DR. K.N. Modi Global School
+                    </h4>
+                    <p class="text-green-200 text-sm leading-relaxed">The School is located at Modinagar in western
+                        U.P., on Delhi–Meerut–Dehradun National Highway (NH-58) and it is at a distance of 32 kms from
+                        the Delhi Border...</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 border-b-2 border-green-600 pb-2">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">School System</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">Alumni
+                                Registration</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">Infrastructure</a>
+                        </li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">Library</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">Medical Facility</a>
+                        </li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">Academics</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Useful Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 border-b-2 border-green-600 pb-2">Useful Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">CBSE Circular to
+                                Parents</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">Press Release</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">News</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">About Foundation</a>
+                        </li>
+                        <li><a href="#" class="text-green-200 hover:text-white transition-colors">Hostel Facility</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 border-b-2 border-green-600 pb-2">Quick Contact</h4>
+                    <address class="not-italic text-sm text-green-200 space-y-3">
+                        <p>+91-8392953694 | 95<br>+91-8791082246</p>
+                        <p><a href="mailto:principal@knmodiglobalschool.org"
+                                class="hover:text-white">principal@knmodiglobalschool.org</a></p>
+                        <p>Hapur Road, Near eye hospital Modinagar, Distt. Ghaziabad (U.P.)<br>Pin - 201 204 India</p>
+                    </address>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-green-200 hover:text-white"><svg class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.35C0 23.41.59 24 1.325 24H12.82v-9.29H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h5.713c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z" />
+                            </svg></a>
+                        <a href="#" class="text-green-200 hover:text-white"><svg class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085c.645 1.956 2.52 3.379 4.744 3.417a9.88 9.88 0 01-6.112 2.106c-.398 0-.79-.023-1.175-.068a13.963 13.963 0 007.548 2.212c9.058 0 14.01-7.502 14.01-14.01 0-.213-.005-.426-.015-.637a9.954 9.954 0 002.45-2.54z" />
+                            </svg></a>
+                        <a href="#" class="text-green-200 hover:text-white"><svg class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-black-700 pt-6 text-center text-sm text-yellow-300">
+                <p>&copy; 2024 DR. K.N. Modi Global School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="scrip.js"></script>
+</body>
+
+</html>
