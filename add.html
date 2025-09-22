@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Admission Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; background:#f4f8fb; padding:20px;">
+
+  <h2 style="text-align:center; color:#2c3e50;">Student Admission Form (2025-26)</h2>
+
+  <form id="admissionForm" style="max-width:700px; margin:auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);" 
+        onsubmit="return validateForm()">
+
+    <!-- Student Details -->
+    <label style="display:block; margin-top:10px;">Student's Name:</label>
+    <input type="text" id="studentName" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <label style="display:block; margin-top:10px;">Aadhar Card No:</label>
+    <input type="text" id="studentAadhar" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <!-- Father -->
+    <label style="display:block; margin-top:10px;">Father's Name:</label>
+    <input type="text" id="fatherName" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <label style="display:block; margin-top:10px;">Father's Aadhar:</label>
+    <input type="text" id="fatherAadhar" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <!-- Mother -->
+    <label style="display:block; margin-top:10px;">Mother's Name:</label>
+    <input type="text" id="motherName" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <label style="display:block; margin-top:10px;">Mother's Aadhar:</label>
+    <input type="text" id="motherAadhar" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <!-- Address -->
+    <label style="display:block; margin-top:10px;">Address:</label>
+    <textarea id="address" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;"></textarea>
+
+    <!-- Mobile -->
+    <label style="display:block; margin-top:10px;">Mobile No:</label>
+    <input type="text" id="mobile" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <!-- DOB -->
+    <label style="display:block; margin-top:10px;">Date of Birth:</label>
+    <input type="date" id="dob" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <!-- Category -->
+    <label style="display:block; margin-top:10px;">Category (Caste):</label>
+    <input type="text" id="category" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <!-- Class & Roll -->
+    <label style="display:block; margin-top:10px;">Class:</label>
+    <input type="text" id="class" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <label style="display:block; margin-top:10px;">Roll No:</label>
+    <input type="text" id="rollNo" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <!-- Marks -->
+    <label style="display:block; margin-top:10px;">Marks Obtained (%)(2024-25):</label>
+    <input type="text" id="marks" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
+
+    <!-- Submit -->
+    <button type="submit" 
+      style="margin-top:20px; background:#3498db; color:#fff; padding:10px 15px; border:none; border-radius:5px; cursor:pointer;">
+      Submit Form
+    </button>
+  </form>
+
+  <!-- Inline JS -->
+  <script>
+    function validateForm() {
+      var name = document.getElementById("studentName").value;
+      var mobile = document.getElementById("mobile").value;
+
+      if(name === "" || mobile === "") {
+        alert("Please fill all required fields!");
+        return false;
+      }
+      if(isNaN(mobile) || mobile.length != 10) {
+        alert("Enter a valid 10-digit mobile number!");
+        return false;
+      }
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
