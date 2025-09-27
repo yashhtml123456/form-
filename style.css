@@ -24,4 +24,8 @@
         }
         .glow-button:hover {
             box-shadow: 0 0 15px rgba(22, 163, 74, 0.6); /* Updated to green glow */
+
         }
+s:hover{
+         background-color: yellow;
+}
